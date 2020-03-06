@@ -5,7 +5,7 @@ import Upload from "./components/Upload";
 import FileList from "./components/FileList";
 import { uniqueId } from "lodash";
 import filesize from "filesize";
-import API from "./services/api";
+// import API from "./services/api";
 
 export default () => {
   const [updFiles, setUpdFiles] = useState([]);
@@ -27,16 +27,6 @@ export default () => {
         }))
       )
     );
-  }
-
-  function processUpload(uploadedFile) {
-    const data = new FormData();
-    data.append("file", uploadedFile.file, uploadedFile.name);
-    API.post("/posts", data, {
-      onUploadProgress: env => {
-        const prog = parseInt(Math.round(env.loaded * 100) / env.total);
-      }
-    });
   }
 
   return (
