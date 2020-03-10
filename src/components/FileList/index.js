@@ -33,11 +33,7 @@ export default ({ files }) => {
               />
             )}
             {item.url && (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={item.url} target="_blank" rel="noopener noreferrer">
                 <MdLink style={{ marginRight: 8 }} size={24} color="#222" />
               </a>
             )}

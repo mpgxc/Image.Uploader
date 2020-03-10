@@ -45,6 +45,11 @@ export default () => {
     setloading(true);
   }
 
+  function handleDownload(env) {
+    env.preventDefault();
+    setloading(true);
+  }
+
   return (
     <>
       <GlobalStyle />
@@ -53,11 +58,17 @@ export default () => {
           <PreviewContainer>
             <PreviewContent>
               {!!updFiles.length && (
-                <img width="100%" src={updFiles[0].preview} alt="opa" />
+                <img
+                  width="100%"
+                  height="100%"
+                  src={updFiles[0].preview}
+                  alt="opa"
+                />
               )}
             </PreviewContent>
             <StyleButton onClick={handleProcess}>Processar</StyleButton>
             <PreviewContent>{!!loading && <h1>Opaaa</h1>}</PreviewContent>
+            <StyleButton onClick={handleDownload}>Baixar Imagem</StyleButton>
           </PreviewContainer>
           <UploadContent>
             <Upload onUpload={handleUpload} />
