@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import GlobalStyle from "./styles/global";
-import { Container, Content } from "./styles";
+
+import {
+  Container,
+  UploadContent,
+  MainContent,
+  PreviewContent,
+  PreviewContainer,
+  StyleButton
+} from "./styles";
+
 import Upload from "./components/Upload";
 import FileList from "./components/FileList";
+
 import { uniqueId } from "lodash";
 import filesize from "filesize";
 // import API from "./services/api";
 
 export default () => {
   const [updFiles, setUpdFiles] = useState([]);
+  const [loading, setloading] = useState(false);
 
   function handleUpload(files) {
     setUpdFiles(
@@ -29,13 +40,31 @@ export default () => {
     );
   }
 
+  function handleProcess(env) {
+    env.preventDefault();
+    setloading(true);
+  }
+
   return (
-    <Container>
+    <>
       <GlobalStyle />
-      <Content>
-        <Upload onUpload={handleUpload} />
-        {!!updFiles.length && <FileList files={updFiles} />}
-      </Content>
-    </Container>
+      <Container>
+        <MainContent>
+          <PreviewContainer>
+            <PreviewContent>
+              {!!updFiles.length && (
+                <img width="100%" src={updFiles[0].preview} alt="opa" />
+              )}
+            </PreviewContent>
+            <StyleButton onClick={handleProcess}>Processar</StyleButton>
+            <PreviewContent>{!!loading && <h1>Opaaa</h1>}</PreviewContent>
+          </PreviewContainer>
+          <UploadContent>
+            <Upload onUpload={handleUpload} />
+            {!!updFiles.length && <FileList files={updFiles} />}
+          </UploadContent>
+        </MainContent>
+      </Container>
+    </>
   );
 };
