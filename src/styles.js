@@ -12,7 +12,7 @@ export const MainContent = styled.div`
   height: 100%;
 
   max-width: 900px;
-  max-height: 770px;
+  max-height: 840px;
 
   display: flex;
 
@@ -25,7 +25,7 @@ export const PreviewContainer = styled.div`
   height: 100%;
 
   max-width: 600px;
-  max-height: 730px;
+  max-height: 800px;
 
   background: #f5f5f5;
   border-radius: 5px;
@@ -48,7 +48,9 @@ export const PreviewContent = styled.div`
   margin-bottom: 20px;
 `;
 
-export const StyleButton = styled.button`
+export const StyleButton = styled.button.attrs({
+  type: "submit"
+})`
   width: 100%;
   border: 0;
 
@@ -60,8 +62,12 @@ export const StyleButton = styled.button`
   font-weight: bold;
   color: #fff;
   cursor: pointer;
-`;
 
+  &:hover {
+    transition: 0.7s all ease-out;
+    background-color: #9d72e8;
+  }
+`
 export const UploadContent = styled.div`
   width: 100%;
   height: 100%;
@@ -75,4 +81,5 @@ export const UploadContent = styled.div`
 
   margin: 20px;
   margin-left: 10px;
-`;
+`
+
