@@ -67,8 +67,7 @@ export const StyleButton = styled.button.attrs({
     transition: 0.7s all ease-out;
     background-color: #9d72e8;
   }
-`;
-
+`
 export const UploadContent = styled.div`
   width: 100%;
   height: 100%;
@@ -82,4 +81,5 @@ export const UploadContent = styled.div`
 
   margin: 20px;
   margin-left: 10px;
-`;
+`
+
