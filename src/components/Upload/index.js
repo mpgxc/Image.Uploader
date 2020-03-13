@@ -3,6 +3,7 @@ import { DropContainer, UploadMessage } from "./styles";
 import Dropzone from "react-dropzone";
 
 export default ({ onUpload }) => {
+
   function renderDragMessage(isDragActive, isDragReject) {
     if (!isDragActive) {
       return <UploadMessage>Arraste as imagem aqui!</UploadMessage>;

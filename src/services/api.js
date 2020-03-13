@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURl: "http://localhost:3000"
+  baseURl: "https://api.remove.bg/v1.0/removebg"
 });
