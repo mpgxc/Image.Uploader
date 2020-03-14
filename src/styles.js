@@ -48,6 +48,22 @@ export const PreviewContent = styled.div`
   margin-bottom: 20px;
 `;
 
+
+export const DisableButton = styled.button`
+
+  width: 100%;
+  border: 0;
+
+  background: #ddd;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+`
+
 export const StyleButton = styled.button.attrs({
   type: "submit"
 })`
