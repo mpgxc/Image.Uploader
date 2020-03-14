@@ -48,9 +48,7 @@ export const PreviewContent = styled.div`
   margin-bottom: 20px;
 `;
 
-
 export const DisableButton = styled.button`
-
   width: 100%;
   border: 0;
 
@@ -62,7 +60,7 @@ export const DisableButton = styled.button`
   font-weight: bold;
   color: #fff;
   cursor: pointer;
-`
+`;
 
 export const StyleButton = styled.button.attrs({
   type: "submit"
@@ -83,13 +81,14 @@ export const StyleButton = styled.button.attrs({
     transition: 0.7s all ease-out;
     background-color: #9d72e8;
   }
-`
-export const UploadContent = styled.div`
+`;
+
+export const UploadContainer = styled.div`
   width: 100%;
   height: 100%;
 
   max-width: 300px;
-  max-height: 300px;
+  max-height: 800px;
 
   background: #f5f5f5;
   border-radius: 5px;
@@ -97,5 +96,12 @@ export const UploadContent = styled.div`
 
   margin: 20px;
   margin-left: 10px;
-`
+`;
 
+export const UploadContent = styled.div`
+  background: #f5f5f5;
+  border-radius: 5px;
+  margin-bottom: 20px;
+`;
+
+export const ListUploadsContent = styled.div``;
